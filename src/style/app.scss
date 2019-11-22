@@ -1,0 +1,21 @@
+@import "var";
+@import "animate";
+
+html, body {
+  color: $fc;
+  background-color: $bg;
+  min-height: 100%;
+}
+
+.demo1 {
+  background-color: red;
+}
+.demo2{
+  background-color: green;
+}
+.demo3 {
+  background-color: blue;
+}
+.demo4 {
+  background-color: aqua;
+}
