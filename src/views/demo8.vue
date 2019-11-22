@@ -50,7 +50,7 @@ class Blockchain{
     }
     return true;
   }
-};
+}
   export default {
     name: 'demo8',
     data() {
@@ -68,15 +68,12 @@ class Blockchain{
           baseURL: 'http://127.168.10.139:3000',
           url: '/role',
           methods: 'get',
-        }, (res) => {
-          console.log('res', res);
-        });
+        }, () => {});
       },
       init() {
         let savjeeCoin = new Blockchain();
         savjeeCoin.addBlock(new Block(1, "20/07/2017", { amount: 4 }));
         savjeeCoin.addBlock(new Block(2, "20/07/2017", { amount: 8 }));
-        console.log(savjeeCoin);
       },
     },
   }
