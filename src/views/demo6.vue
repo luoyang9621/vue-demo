@@ -2,6 +2,7 @@
   <div class="demo6">
     内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
     内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+    <van-button @click="toPage">下一页</van-button>
     <div v-permission="'addList'">权限测试权限测试权限测试权限测试权限测试元素</div>
     <div v-permission="">22222222222222</div>
     <div ref="self">1111wqaw</div>
@@ -33,6 +34,9 @@
           }
         },
         methods: {
+          toPage() {
+            this.$router.push({ name: 'demo7' });
+          },
         },
         beforeCreate() {
             console.log('beforeCreate', this.list, this, this.myLive, this.$refs.self);

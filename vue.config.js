@@ -12,5 +12,6 @@ module.exports = {
         }
       },
     },
-    productionSourceMap: false
+    productionSourceMap: false,
+    publicPath: '/public/client' // 为了配合egg的
 };

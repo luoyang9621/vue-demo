@@ -104,7 +104,7 @@ const routes = [
 ];
 const newRoutes = routes.concat(permission);
 const router = new Router({
-    mode: 'history',
+    // mode: 'history',
     routes: newRoutes,
 });
 

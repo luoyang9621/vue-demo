@@ -12,6 +12,7 @@
               :title="item"
       />
     </van-list>
+    <van-button @click="toPage">下一页</van-button>
   </div>
 </template>
 
@@ -52,6 +53,9 @@
             this.finished = true;
           }
         }, 2000);
+      },
+      toPage() {
+        this.$router.push({ name: 'demo8' });
       },
     },
   }

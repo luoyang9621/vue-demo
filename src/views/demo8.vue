@@ -4,6 +4,7 @@
     <div>
       区块链
     </div>
+    <van-button @click="getList">触发接口</van-button>
   </div>
 </template>
 
@@ -63,6 +64,11 @@ class Blockchain{
       this.init();
     },
     methods: {
+      getList() {
+        this.$get('/getList1', (res) => {
+          console.log('getList1', res);
+        });
+      },
       onLoad() {
         axios({
           baseURL: 'http://127.168.10.139:3000',
