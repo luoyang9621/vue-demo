@@ -2,7 +2,7 @@ import axios from 'axios';
 import { stringify } from 'qs';
 
 // axios.defaults.baseURL = 'http://api.wallet.szspapp.com/api';
-axios.defaults.baseURL = '/app/'; // 为了配合egg
+axios.defaults.baseURL = '/api/'; // 为了配合egg
 axios.defaults.transformRequest = data => stringify(data);
 // axios.defaults.headers = {
 //     'Content-Type': 'application/x-www-form-urlencoded',

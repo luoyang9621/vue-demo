@@ -4,9 +4,8 @@ const path = require('path');
 
 
 router.get('/', (req, res, next) => {
-  console.log('admin admin');
-  console.log('路由执行成功了2', Date.now());
-  res.sendFile(path.resolve(__dirname, './../dist2/index.html'));
+  console.log('admin路由执行成功了2', Date.now());
+  res.sendFile(path.resolve(__dirname, './../serverHtml/index2.html'));
   // res.send('okoko')
 });
 

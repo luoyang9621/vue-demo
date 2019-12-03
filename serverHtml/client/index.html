@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>这个是client的页面</title>
+  <link rel="stylesheet" href="./static/index.css">
+</head>
+<body>
+<h1>这个是client页面</h1>
+<h2>client client</h2>
+<form action="/api/getList3" method="post">
+  <ul>
+    <li>
+      <label for="username"></label><input id="username" name="username" type="text">
+    </li>
+    <li>
+      <label for="userpw"></label><input id="userpw" name="userpw" type="password">
+    </li>
+    <li>
+      <button>提交</button>
+    </li>
+  </ul>
+</form>
+<button id="submitAjax">ajax提交</button>
+</body>
+<script type="text/javascript">
+  document.getElementById('submitAjax').onclick = function () {
+    const username = document.getElementById('username');
+    const userpw = document.getElementById('userpw');
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/api/getList3/3?key=1&value=2', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onreadystatechange = () => {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        console.log('success');
+      }
+    };
+    xhr.send(`username=${username.value}&userpw=${userpw.value}`);
+    // xhr.send({ username: username.value, userpw: userpw.value });
+  }
+</script>
+</html>
