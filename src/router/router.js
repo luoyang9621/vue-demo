@@ -20,7 +20,7 @@ const routes = [
         meta: {
             isAlive: false,
         },
-        component: () => import(/*webpackChunkName: 'demo1' */ '../views/demo1'),
+        component: () => import(/*webpackChunkName: 'demo1' */ '../views/demo1')
     },
     {
         path: '/demo2',
@@ -32,10 +32,23 @@ const routes = [
     },{
         path: '/demo3',
         name: 'demo3',
+        redirect: '/demo3/da1',
         meta: {
             isAlive: false,
         },
         component: () => import(/*webpackChunkName: 'demo3' */ '../views/demo3'),
+        children: [
+            {
+                path: 'da1',
+                name: 'da1',
+                component: () => import(/*webpackChunkName: 'da1' */ '../views/children/da1'),
+            },
+            {
+                path: 'da2',
+                name: 'da2',
+                component: () => import(/*webpackChunkName: 'da2' */ '../views/children/da2'),
+            },
+        ]
     },
     {
         path: '/demo4',

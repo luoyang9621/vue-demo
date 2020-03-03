@@ -65,7 +65,12 @@ class Blockchain{
     },
     methods: {
       getList() {
-        this.$get('/getList1', (res) => {
+        const formData = new FormData();
+        formData.append('1122', 'aaaa');
+        const params = {
+          uploadFile: formData
+        }
+        this.$post('/getList1', formData, (res) => {
           console.log('getList1', res);
         });
       },

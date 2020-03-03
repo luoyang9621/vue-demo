@@ -3,6 +3,9 @@
         <van-button type="primary" @click="$router.push({ name: 'demo4' })">前进</van-button>
         <van-button type="default" @click="$router.back()">后退</van-button>
         <van-button type="default" @click="updateP2(14324)">触发p2改变</van-button>
+        <keep-alive :exclude="['da2']">
+            <router-view></router-view>
+        </keep-alive>
     </div>
 </template>
 

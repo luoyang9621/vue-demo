@@ -24,5 +24,5 @@ app.use('/admin', admin);
 app.use('/api', api);
 
 app.listen(8899, 'localhost', () => {
-  console.log('app is running');
+  console.log('app is running on' + 8899);
 });

@@ -1,4 +1,4 @@
 export default {
-    keepAliveList: [],
+    keepAliveList: ['demo3'],
     permissionList: [],
 }
